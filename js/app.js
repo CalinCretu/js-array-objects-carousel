@@ -1,5 +1,4 @@
 console.log('Carosello Array di Oggetti');
-
 const images = [
   {
     image: 'img/01.webp',
@@ -27,10 +26,7 @@ const images = [
     text: "Marvel's Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.",
   },
 ]
-
 const imageListDOMElement = document.querySelector('.image-list')
-
-
 for (let i = 0; i < images.length; i++) {
   const currentCard = images[i];
   const cardContent = `
@@ -43,13 +39,9 @@ for (let i = 0; i < images.length; i++) {
   imageListDOMElement.innerHTML += cardContent;
   console.log(currentCard);
 }
-
 const objectDOMElements = document.querySelectorAll('.description');
 let currentIndex = 0;
 let currentCard = objectDOMElements[currentIndex];
 currentCard.classList.add('active')
-
-
-
 const arrowTop = document.getElementById('prev-slide');
 const arrowBottom = document.getElementById('next-slide');
