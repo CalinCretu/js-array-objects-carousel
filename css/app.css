@@ -1,6 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Dekko&family=Patrick+Hand&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: aquamarine;
+}
+
+body {
+  font-family: 'Dekko', cursive;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(94, 18, 46);
+}
+
+img {
+  max-height: 100%;
+  border-radius: 25px;
+}
+
+.arrow-up,
+.arrow-down {
+  color: white;
+  font-size: 30px;
+  background-color: grey;
+  opacity: 0.7;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+button:hover {
+  border: 1px solid black;
+  transition: 0.1s;
+}
+
+button:focus {
+  outline-color: transparent;
+  outline-style: solid;
+  box-shadow: 0 0 0 2px #5a01a7;
+}
+
+button:active {
+  background-color: #ffbf00;
+  transition: 0s;
+}
+
+.container {
+  position: relative;
+}
+
+.image-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+  height: 800px;
+}
+
+.image-list>* {
+  display: none;
+}
+
+.description {
+  height: 800px;
+  position: relative;
+  text-align: end;
+  color: white;
+  font-size: 20px;
+}
+
+button {
+  position: absolute;
+  background-color: #220231;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+}
+
+#prev-slide {
+  left: 50%;
+  top: -5%;
+  transform: translateX(-50%);
+}
+
+#next-slide {
+  left: 50%;
+  bottom: -5%;
+  transform: translateX(-50%);
+}
+
+.title {
+  position: absolute;
+  bottom: 15%;
+  right: 2%;
+  font-size: 30px;
+}
+
+.text {
+  position: absolute;
+  bottom: 5%;
+  right: 2%;
+}
+
+.active {
+  display: block;
+}
+
+.d-none {
+  display: none;
 }
