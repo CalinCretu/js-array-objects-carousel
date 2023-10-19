@@ -45,3 +45,27 @@ let currentCard = objectDOMElements[currentIndex];
 currentCard.classList.add('active')
 const arrowTop = document.getElementById('prev-slide');
 const arrowBottom = document.getElementById('next-slide');
+
+arrowBottom.addEventListener('click', function () {
+
+  const nextCard = objectDOMElements[currentIndex + 1]
+  if (nextCard) {
+    const activeCard = objectDOMElements[currentIndex];
+    activeCard.classList.remove('active')
+    nextCard.classList.add('active')
+    currentIndex++
+  }
+
+})
+
+arrowTop.addEventListener('click', function () {
+
+  const nextCard = objectDOMElements[currentIndex - 1]
+  if (nextCard) {
+    const activeCard = objectDOMElements[currentIndex];
+    activeCard.classList.remove('active')
+    nextCard.classList.add('active')
+    currentIndex--
+  }
+
+})
